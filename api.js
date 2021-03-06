@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -16,12 +17,35 @@ api.get("/", function (req, res) {
   res.status(200).send(`Welcome to the kraaken API ${version}`);
 });
 
+const isDir = (path) => fs.lstatSync(path).isDirectory();
+
+api.get("/levels", function (req, res) {
+  const levelsPath = `${__dirname}\\levels`;
+
+  const levels = fs.readdirSync(levelsPath).reduce((acc, id) => {
+    const levelPath = `${levelsPath}\\${id}\\level.json`;
+
+    if (fs.existsSync(levelPath)) {
+      const levelData = JSON.parse(fs.readFileSync(levelPath));
+
+      if (isDir(path.join(levelsPath, id))) {
+        acc.push({ id, title: levelData.title });
+      }
+    }
+    return acc;
+  }, []);
+
+  res.status(200).json(levels);
+});
+
 api.get("/levels/:levelId", function (req, res) {
   const { levelId } = req.params;
 
-  const levelPath = `${__dirname}\\levels\\${levelId}\\level.json`;
-  const entitiesPath = `${__dirname}\\levels\\${levelId}\\entities.json`;
-  const resourcesPath = `${__dirname}\\levels\\${levelId}\\resources.json`;
+  const levelsPath = `${__dirname}\\levels`;
+
+  const levelPath = `${levelsPath}\\${levelId}\\level.json`;
+  const entitiesPath = `${levelsPath}\\${levelId}\\entities.json`;
+  const resourcesPath = `${levelsPath}\\${levelId}\\resources.json`;
 
   if (!fs.existsSync(levelPath)) {
     res.status(404).json({
