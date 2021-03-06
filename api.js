@@ -20,10 +20,10 @@ api.get("/", function (req, res) {
 const isDir = (path) => fs.lstatSync(path).isDirectory();
 
 api.get("/levels", function (req, res) {
-  const levelsPath = `${__dirname}\\levels`;
+  const levelsPath = path.join(__dirname, `levels`);
 
   const levels = fs.readdirSync(levelsPath).reduce((acc, id) => {
-    const levelPath = `${levelsPath}\\${id}\\level.json`;
+    const levelPath = path.join(levelsPath, id, `level.json`);
 
     if (fs.existsSync(levelPath)) {
       const levelData = JSON.parse(fs.readFileSync(levelPath));
@@ -43,9 +43,9 @@ api.get("/levels/:levelId", function (req, res) {
 
   const levelsPath = `${__dirname}\\levels`;
 
-  const levelPath = `${levelsPath}\\${levelId}\\level.json`;
-  const entitiesPath = `${levelsPath}\\${levelId}\\entities.json`;
-  const resourcesPath = `${levelsPath}\\${levelId}\\resources.json`;
+  const levelPath = path.join(levelsPath, levelId, `level.json`);
+  const entitiesPath = path.join(levelsPath, levelId, `entities.json`);
+  const resourcesPath = path.join(levelsPath, levelId, `resources.json`);
 
   if (!fs.existsSync(levelPath)) {
     res.status(404).json({
@@ -68,15 +68,17 @@ api.get("/levels/:levelId", function (req, res) {
 
 api.post("/levels/:levelId", function (req, res) {
   const { levelId } = req.params;
-  const path = `${__dirname}\\levels\\${levelId}\\level.json`;
 
-  if (!fs.existsSync(path)) {
+  const levelsPath = `${__dirname}\\levels`;
+  const levelPath = path.join(levelsPath, levelId, `level.json`);
+
+  if (!fs.existsSync(levelPath)) {
     res.status(404).json({
       error: `Could not find level "${levelId}"`,
     });
   } else {
     try {
-      fs.writeFileSync(path, JSON.stringify(req.body, null, 2));
+      fs.writeFileSync(levelPath, JSON.stringify(req.body, null, 2));
       res.status(200).json();
     } catch (e) {
       res.status(400).json({
