@@ -41,7 +41,7 @@ api.get("/levels", function (req, res) {
 api.get("/levels/:levelId", function (req, res) {
   const { levelId } = req.params;
 
-  const levelsPath = `${__dirname}\\levels`;
+  const levelsPath = path.join(__dirname, `levels`);
 
   const levelPath = path.join(levelsPath, levelId, `level.json`);
   const entitiesPath = path.join(levelsPath, levelId, `entities.json`);
@@ -69,7 +69,8 @@ api.get("/levels/:levelId", function (req, res) {
 api.post("/levels/:levelId", function (req, res) {
   const { levelId } = req.params;
 
-  const levelsPath = `${__dirname}\\levels`;
+  const levelsPath = path.join(__dirname, `levels`);
+
   const levelPath = path.join(levelsPath, levelId, `level.json`);
 
   if (!fs.existsSync(levelPath)) {
