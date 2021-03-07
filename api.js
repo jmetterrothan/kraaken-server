@@ -72,6 +72,7 @@ api.post("/levels/:levelId", function (req, res) {
   const levelsPath = path.join(__dirname, `levels`);
 
   const levelPath = path.join(levelsPath, levelId, `level.json`);
+  const levelCopyPath = path.join(levelsPath, levelId, `level.save.json`);
 
   if (!fs.existsSync(levelPath)) {
     res.status(404).json({
@@ -79,6 +80,7 @@ api.post("/levels/:levelId", function (req, res) {
     });
   } else {
     try {
+      fs.copyFileSync(levelPath, levelCopyPath);
       fs.writeFileSync(levelPath, JSON.stringify(req.body, null, 2));
       res.status(200).json();
     } catch (e) {
