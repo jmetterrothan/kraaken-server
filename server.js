@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
     console.log(`Joined room ${roomId}`);
   });
 
-  socket.on("sync_with_room", (roomId) => {
+  socket.on("sync_room", (roomId) => {
     const events = rooms.get(roomId);
 
     if (events) {
@@ -44,6 +44,10 @@ io.on("connection", (socket) => {
         socket.emit(type, event);
       });
     }
+  });
+
+  socket.on("reset_room", (roomId) => {
+    rooms.set(roomId, []);
   });
 
   socket.on("event", ({ roomId, event: { type, ...event } }) => {
