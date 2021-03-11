@@ -747,7 +747,10 @@
           "gravity": false
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 9, "height": 11 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 9, "height": 11 }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "enemies", "align": "center" }
