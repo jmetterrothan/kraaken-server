@@ -898,7 +898,8 @@
         "metadata": {
           "direction": { "x": -1, "y": 1 },
           "collide": true,
-          "gravity": true
+          "gravity": true,
+          "clamToMap": true
         }
       },
       { "name": "player_input" },
