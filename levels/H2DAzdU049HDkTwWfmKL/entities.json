@@ -948,6 +948,11 @@
               "loop": true,
               "keyframes": [{ "row": 1, "col": 2, "duration": 0 }]
             },
+            "player:climbing": {
+              "sprite": "hero",
+              "loop": true,
+              "keyframes": [{ "row": 2, "col": 2, "duration": 0 }]
+            },
             "player:walking": {
               "sprite": "hero",
               "loop": true,

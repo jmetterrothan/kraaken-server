@@ -1,6 +1,9 @@
 const http = require("http");
 const express = require("express");
 const uuidv4 = require("uuid").v4;
+const dotenv = require("dotenv");
+
+const config = dotenv.config();
 
 const api = require("./api");
 

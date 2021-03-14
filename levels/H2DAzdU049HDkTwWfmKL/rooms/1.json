@@ -1,0 +1,27 @@
+{
+  "id": "1",
+  "tileSet": "tiles",
+  "tileSize": 16,
+  "tileMapCols": 4,
+  "tileMapRows": 4,
+  "layers": {
+    "1": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "2": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "3": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "spawnPoints": [
+    {
+      "type": "player",
+      "uuid": "18907d0c-8961-40af-acd8-e8b9f5eefcb4",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": {
+        "x": 1,
+        "y": 1
+      },
+      "debug": false
+    }
+  ]
+}
