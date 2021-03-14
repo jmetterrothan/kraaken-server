@@ -46,8 +46,6 @@ api.get("/levels/:levelId", function (req, res) {
   const levelsPath = path.join(__dirname, `levels`);
 
   const levelPath = path.join(levelsPath, levelId, `level.json`);
-  const entitiesPath = path.join(levelsPath, levelId, `entities.json`);
-  const resourcesPath = path.join(levelsPath, levelId, `resources.json`);
 
   if (!fs.existsSync(levelPath)) {
     res.status(404).json({
@@ -56,6 +54,8 @@ api.get("/levels/:levelId", function (req, res) {
     return;
   }
 
+  const entitiesPath = path.join(levelsPath, levelId, `entities.json`);
+  const resourcesPath = path.join(levelsPath, levelId, `resources.json`);
   const roomsPath = path.join(levelsPath, levelId, `rooms`);
 
   const rooms = fs.readdirSync(roomsPath).reduce((acc, id) => {
@@ -75,7 +75,8 @@ api.get("/levels/:levelId", function (req, res) {
 
   try {
     res.status(200).json({
-      level: { id: levelId, ...JSON.parse(fs.readFileSync(levelPath)) },
+      id: levelId,
+      ...JSON.parse(fs.readFileSync(levelPath)),
       rooms,
       entities: JSON.parse(fs.readFileSync(entitiesPath)),
       resources: JSON.parse(fs.readFileSync(resourcesPath)),
