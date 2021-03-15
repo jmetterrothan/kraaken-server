@@ -552,7 +552,7 @@
           "direction": { "x": 1, "y": 1 },
           "collide": true,
           "gravity": false,
-          "bounciness": 0.9,
+          "bounciness": 0.8,
           "reflect": true,
           "reflectAngle": true,
           "reflectVFX": "dust_hit_effect"
@@ -571,7 +571,7 @@
           "pickUpSFX": "hit"
         }
       },
-      { "name": "projectile", "metadata": { "speed": 275, "ttl": 1000 } },
+      { "name": "projectile", "metadata": { "speed": 275, "ttl": 800 } },
       {
         "name": "animator",
         "metadata": {
@@ -948,7 +948,12 @@
               "loop": true,
               "keyframes": [{ "row": 1, "col": 2, "duration": 0 }]
             },
-            "player:climbing": {
+            "player:wallJumping": {
+              "sprite": "hero",
+              "loop": true,
+              "keyframes": [{ "row": 1, "col": 0, "duration": 0 }]
+            },
+            "player:wallSliding": {
               "sprite": "hero",
               "loop": true,
               "keyframes": [{ "row": 2, "col": 2, "duration": 0 }]
@@ -964,8 +969,8 @@
             },
             "player:use_primary_weapon": {
               "sprite": "hero",
-              "loop": true,
-              "keyframes": [{ "row": 0, "col": 3, "duration": 250 }]
+              "loop": false,
+              "keyframes": [{ "row": 0, "col": 3, "duration": 1000 }]
             }
           },
           "defaultKey": "player:idle"

@@ -27,6 +27,25 @@ const spawnPointSchema = Joi.object({
   debug: Joi.boolean().required(),
 });
 
+const gameEventSchema = Joi.object({
+  type: Joi.string().required(),
+  data: Joi.any().required(),
+});
+
+const eventZoneSchema = Joi.object({
+  mode: Joi.string().valid("contains", "intersects").required(),
+  position: Joi.object({
+    x: Joi.number().required(),
+    y: Joi.number().required(),
+  }),
+  width: Joi.number().required(),
+  height: Joi.number().required(),
+  cooldownDelay: Joi.number().required(),
+  maxTimesTriggered: Joi.number().required(),
+  events: Joi.array().items(gameEventSchema).required(),
+  debug: Joi.boolean().required(),
+});
+
 const roomSchema = Joi.object({
   id: Joi.string().required(),
   tileSet: Joi.string().required(),
@@ -42,6 +61,7 @@ const roomSchema = Joi.object({
     .items(spawnPointSchema)
     .required()
     .unique((a, b) => a.uuid === b.uuid),
+  zones: Joi.array().items(eventZoneSchema).required(),
 });
 
 module.exports = {
