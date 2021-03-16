@@ -81,6 +81,10 @@
   ],
   "sounds": [
     {
+      "src": "/sounds/classic_hurt.mp3",
+      "name": "classic_hurt"
+    },
+    {
       "src": "/sounds/jump.wav",
       "name": "jump"
     },

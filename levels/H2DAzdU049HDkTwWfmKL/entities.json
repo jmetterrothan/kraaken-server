@@ -918,7 +918,12 @@
       { "name": "bounding_box", "metadata": { "width": 8, "height": 13 } },
       {
         "name": "health",
-        "metadata": { "maxHealth": 12, "immunityDelay": 1000 }
+        "metadata": {
+          "maxHealth": 12,
+          "immunityDelay": 1000,
+          "hurtSFX": "classic_hurt",
+          "deathSFX": "classic_hurt"
+        }
       },
       { "name": "sprite", "metadata": { "alias": "hero", "align": "bottom" } },
       {

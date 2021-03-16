@@ -824,8 +824,8 @@
       0,
       0,
       0,
-      0,
-      0,
+      78,
+      78,
       0,
       0,
       0,
@@ -1716,7 +1716,27 @@
         "y": 250
       },
       "width": 512,
-      "height": 14,
+      "height": 10,
+      "cooldownDelay": 1000,
+      "maxTimesTriggered": -1,
+      "events": [
+        {
+          "type": "damage",
+          "data": {
+            "amount": -100
+          }
+        }
+      ]
+    },
+    {
+      "mode": "intersects",
+      "debug": false,
+      "position": {
+        "x": 272,
+        "y": 133
+      },
+      "width": 32,
+      "height": 10,
       "cooldownDelay": 1000,
       "maxTimesTriggered": -1,
       "events": [
