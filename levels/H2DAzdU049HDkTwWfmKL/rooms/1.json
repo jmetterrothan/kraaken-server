@@ -1669,8 +1669,10 @@
       },
       "width": 32,
       "height": 48,
+      "color": [0.0, 0.65, 0.75, 1.0],
       "cooldownDelay": 1000,
       "maxTimesTriggered": -1,
+      "shouldTriggerWhileActive": false,
       "events": [
         {
           "type": "change_room",
@@ -1682,15 +1684,17 @@
     },
     {
       "mode": "contains",
-      "debug": false,
+      "debug": true,
       "position": {
         "x": 208,
-        "y": 184
+        "y": 192
       },
       "width": 32,
-      "height": 48,
+      "height": 64,
+      "color": [0.0, 0.65, 0.75, 1.0],
       "cooldownDelay": 5000,
       "maxTimesTriggered": -1,
+      "shouldTriggerWhileActive": true,
       "events": [
         {
           "type": "spawn",
@@ -1710,15 +1714,17 @@
     },
     {
       "mode": "intersects",
-      "debug": false,
+      "debug": true,
       "position": {
         "x": 256,
         "y": 250
       },
       "width": 512,
       "height": 10,
+      "color": [1.0, 0.5, 0.5, 1.0],
       "cooldownDelay": 1000,
       "maxTimesTriggered": -1,
+      "shouldTriggerWhileActive": true,
       "events": [
         {
           "type": "damage",
@@ -1730,20 +1736,22 @@
     },
     {
       "mode": "intersects",
-      "debug": false,
+      "debug": true,
       "position": {
         "x": 272,
         "y": 133
       },
       "width": 32,
       "height": 10,
+      "color": [1.0, 0.5, 0.5, 1.0],
       "cooldownDelay": 1000,
       "maxTimesTriggered": -1,
+      "shouldTriggerWhileActive": true,
       "events": [
         {
           "type": "damage",
           "data": {
-            "amount": -100
+            "amount": -10
           }
         }
       ]

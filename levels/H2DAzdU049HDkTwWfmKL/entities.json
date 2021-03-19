@@ -975,7 +975,7 @@
             "player:use_primary_weapon": {
               "sprite": "hero",
               "loop": false,
-              "keyframes": [{ "row": 0, "col": 3, "duration": 1000 }]
+              "keyframes": [{ "row": 0, "col": 3, "duration": 750 }]
             }
           },
           "defaultKey": "player:idle"
