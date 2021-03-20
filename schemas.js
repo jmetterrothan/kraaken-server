@@ -1,14 +1,11 @@
 const Joi = require("joi");
 
+const colorSchema = Joi.array().items(Joi.number().min(0).max(1)).length(4);
+
 const levelSchema = Joi.object({
   id: Joi.string().required(),
   title: Joi.string().required(),
-  background: Joi.object({
-    r: Joi.number(),
-    g: Joi.number(),
-    b: Joi.number(),
-    a: Joi.number(),
-  }).required(),
+  background: colorSchema.required(),
   gravity: Joi.number().required(),
   defaultRoomId: Joi.string().required(),
 });
@@ -34,16 +31,18 @@ const gameEventSchema = Joi.object({
 
 const eventZoneSchema = Joi.object({
   mode: Joi.string().valid("contains", "intersects").required(),
+  debug: Joi.boolean().required(),
   position: Joi.object({
     x: Joi.number().required(),
     y: Joi.number().required(),
   }),
   width: Joi.number().required(),
   height: Joi.number().required(),
+  color: colorSchema.required(),
   cooldownDelay: Joi.number().required(),
   maxTimesTriggered: Joi.number().required(),
+  shouldTriggerWhileActive: Joi.boolean().required(),
   events: Joi.array().items(gameEventSchema).required(),
-  debug: Joi.boolean().required(),
 });
 
 const roomSchema = Joi.object({

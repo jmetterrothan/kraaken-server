@@ -1662,7 +1662,7 @@
   "zones": [
     {
       "mode": "contains",
-      "debug": true,
+      "debug": false,
       "position": {
         "x": 16,
         "y": 136
@@ -1670,24 +1670,26 @@
       "width": 32,
       "height": 48,
       "color": [0.0, 0.65, 0.75, 1.0],
-      "cooldownDelay": 1000,
+      "cooldownDelay": -1,
       "maxTimesTriggered": -1,
       "shouldTriggerWhileActive": false,
       "events": [
         {
           "type": "change_room",
           "data": {
-            "id": "1"
+            "roomId": "2",
+            "moveTo": { "x": 1546, "y": 408 },
+            "lootAt": { "x": -1, "y": 1 }
           }
         }
       ]
     },
     {
       "mode": "contains",
-      "debug": true,
+      "debug": false,
       "position": {
         "x": 208,
-        "y": 192
+        "y": 191
       },
       "width": 32,
       "height": 64,
@@ -1714,7 +1716,7 @@
     },
     {
       "mode": "intersects",
-      "debug": true,
+      "debug": false,
       "position": {
         "x": 256,
         "y": 250
@@ -1736,7 +1738,7 @@
     },
     {
       "mode": "intersects",
-      "debug": true,
+      "debug": false,
       "position": {
         "x": 272,
         "y": 133

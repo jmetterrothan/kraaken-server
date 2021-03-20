@@ -1,12 +1,12 @@
 {
   "id": "H2DAzdU049HDkTwWfmKL",
-  "title": "Level 0",
-  "background": {
-    "r": 2,
-    "g": 23,
-    "b": 33,
-    "a": 255
-  },
+  "title": "Level 1",
+  "background": [
+    0.008,
+    0.09,
+    0.13,
+    1
+  ],
   "gravity": 580,
-  "defaultRoomId": "1"
+  "defaultRoomId": "2"
 }

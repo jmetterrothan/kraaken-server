@@ -2298,10 +2298,10 @@
       1,
       1,
       1,
-      1,
       0,
       0,
       0,
+      0,
       1,
       1,
       1,
@@ -2388,7 +2388,6 @@
       0,
       0,
       0,
-      1,
       1,
       1,
       1,
@@ -2402,6 +2401,7 @@
       0,
       0,
       0,
+      0,
       1,
       1,
       1,
@@ -2772,8 +2772,6 @@
       1,
       1,
       1,
-      0,
-      0,
       0,
       0,
       0,
@@ -2800,8 +2798,7 @@
       0,
       0,
       0,
-      0,
-      0,
+      1,
       1,
       1,
       1,
@@ -2818,6 +2815,9 @@
       1,
       1,
       1,
+      1,
+      1,
+      1,
       0,
       0,
       0,
@@ -2891,13 +2891,13 @@
       0,
       0,
       0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       1,
       1,
       1,
@@ -5499,8 +5499,8 @@
       454,
       578,
       454,
-      578,
-      241,
+      250,
+      0,
       0,
       0,
       0,
@@ -5599,8 +5599,8 @@
       290,
       290,
       289,
-      289,
       291,
+      0,
       0,
       0,
       0,
@@ -5690,9 +5690,9 @@
       0,
       0,
       0,
-      0,
-      0,
-      0,
+      78,
+      78,
+      78,
       0,
       0,
       0,
@@ -6000,11 +6000,11 @@
       0,
       0,
       0,
-      0,
-      0,
-      0,
-      0,
       534,
+      537,
+      537,
+      536,
+      537,
       537,
       537,
       537,
@@ -6093,17 +6093,17 @@
       0,
       0,
       0,
-      534,
-      536,
-      537,
-      537,
-      536,
-      537,
-      537,
-      537,
-      536,
-      536,
-      536,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      575,
+      454,
+      454,
+      454,
       454,
       454,
       454,
@@ -6193,13 +6193,13 @@
       0,
       0,
       0,
-      575,
-      454,
-      454,
-      454,
-      454,
-      578,
-      454,
+      534,
+      537,
+      536,
+      537,
+      537,
+      536,
+      537,
       454,
       454,
       454,
@@ -8894,7 +8894,7 @@
       0,
       0,
       0,
-      239,
+      0,
       412,
       0,
       308,
@@ -9197,15 +9197,15 @@
       0,
       0,
       0,
-      496,
-      496,
-      0,
-      495,
       0,
       0,
-      496,
       0,
-      496,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
@@ -9296,11 +9296,11 @@
       0,
       0,
       0,
+      496,
+      495,
       0,
       0,
-      0,
-      0,
-      0,
+      496,
       0,
       0,
       0,
@@ -9623,7 +9623,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9635,7 +9636,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9647,7 +9649,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9659,7 +9662,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9671,7 +9675,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9683,7 +9688,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9695,7 +9701,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9707,7 +9714,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9719,7 +9727,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9731,7 +9740,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9743,7 +9753,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9755,7 +9766,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9767,7 +9779,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9779,7 +9792,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "torch",
@@ -9791,7 +9805,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "torch",
@@ -9803,7 +9818,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "torch",
@@ -9815,7 +9831,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "torch",
@@ -9827,7 +9844,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "torch",
@@ -9839,55 +9857,47 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "alien_slime",
       "uuid": "682c730b-dddb-4869-bed5-334911109883",
       "position": {
-        "x": 1480,
-        "y": 440
+        "x": 1432,
+        "y": 456
       },
       "direction": {
         "x": 1,
         "y": 1
-      }
-    },
-    {
-      "type": "alien_bat",
-      "uuid": "8722855c-ac65-4a90-ab9a-b5e62c331fe6",
-      "position": {
-        "x": 1224,
-        "y": 264
       },
-      "direction": {
-        "x": 1,
-        "y": 1
-      }
+      "debug": false
     },
     {
       "type": "ghost",
       "uuid": "b72502cb-613d-4a93-a3a0-462072a06b65",
       "position": {
-        "x": 1016,
-        "y": 280
+        "x": 1080,
+        "y": 216
       },
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "player",
       "uuid": "18907d0c-8961-40af-acd8-e8b9f5eefcb4",
       "position": {
-        "x": 88,
-        "y": 376
+        "x": 1192,
+        "y": 408
       },
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "dino",
@@ -9899,7 +9909,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "torch",
@@ -9911,7 +9922,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "ammo_box",
@@ -9923,7 +9935,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9935,7 +9948,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9947,7 +9961,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "coin",
@@ -9959,7 +9974,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "health_potion",
@@ -9971,7 +9987,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "bat",
@@ -9983,19 +10000,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
-    },
-    {
-      "type": "bat",
-      "uuid": "76508842-b7f8-4465-ad89-f7d010266c0f",
-      "position": {
-        "x": 1512,
-        "y": 280
       },
-      "direction": {
-        "x": 1,
-        "y": 1
-      }
+      "debug": false
     },
     {
       "type": "bat",
@@ -10007,7 +10013,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "alien_bat",
@@ -10019,7 +10026,8 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
     },
     {
       "type": "bat",
@@ -10031,28 +10039,50 @@
       "direction": {
         "x": 1,
         "y": 1
-      }
+      },
+      "debug": false
+    },
+    {
+      "type": "alien_bat",
+      "uuid": "30c9040d-26d4-44c6-9459-7ade4ac73f5c",
+      "position": {
+        "x": 1272,
+        "y": 232
+      },
+      "direction": {
+        "x": 1,
+        "y": 1
+      },
+      "debug": false
     }
   ],
   "zones": [
     {
       "mode": "contains",
-      "debug": true,
+      "debug": false,
       "position": {
-        "x": 16,
-        "y": 360
+        "x": 1584,
+        "y": 408
       },
       "width": 32,
       "height": 48,
-      "color": [0.0, 0.65, 0.75, 1.0],
-      "cooldownDelay": 1000,
+      "color": [0, 0.65, 0.75, 1],
+      "cooldownDelay": -1,
       "maxTimesTriggered": -1,
       "shouldTriggerWhileActive": false,
       "events": [
         {
           "type": "change_room",
           "data": {
-            "id": "1"
+            "roomId": "1",
+            "moveTo": {
+              "x": 48,
+              "y": 136
+            },
+            "lootAt": {
+              "x": 1,
+              "y": 1
+            }
           }
         }
       ]
@@ -10062,11 +10092,11 @@
       "debug": false,
       "position": {
         "x": 800,
-        "y": 505
+        "y": 508
       },
       "width": 1600,
-      "height": 14,
-      "color": [1.0, 0.5, 0.5, 1.0],
+      "height": 12,
+      "color": [1, 0.5, 0.5, 1],
       "cooldownDelay": 1000,
       "maxTimesTriggered": -1,
       "shouldTriggerWhileActive": true,
@@ -10075,6 +10105,28 @@
           "type": "damage",
           "data": {
             "amount": -100
+          }
+        }
+      ]
+    },
+    {
+      "mode": "intersects",
+      "debug": false,
+      "position": {
+        "x": 1336,
+        "y": 389
+      },
+      "width": 48,
+      "height": 10,
+      "color": [1, 0.5, 0.5, 1],
+      "cooldownDelay": 1000,
+      "maxTimesTriggered": -1,
+      "shouldTriggerWhileActive": true,
+      "events": [
+        {
+          "type": "damage",
+          "data": {
+            "amount": -10
           }
         }
       ]
