@@ -97,8 +97,16 @@
       "name": "laser"
     },
     {
+      "src": "/sounds/laser_fail.wav",
+      "name": "laser_fail"
+    },
+    {
       "src": "/sounds/pickup.wav",
       "name": "pickup"
+    },
+    {
+      "src": "/sounds/bump_muffled.wav",
+      "name": "bump_muffled"
     }
   ]
 }

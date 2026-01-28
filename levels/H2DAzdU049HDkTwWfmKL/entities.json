@@ -31,6 +31,38 @@
     ]
   },
   {
+    "type": "dust_land_hard_effect",
+    "components": [
+      { "name": "position" },
+      {
+        "name": "sprite",
+        "metadata": { "alias": "dust_effects", "align": "bottom" }
+      },
+      {
+        "name": "animator",
+        "metadata": {
+          "list": {
+            "dust_land_hard_effect:idle": {
+              "sprite": "dust_effects",
+              "loop": true,
+              "keyframes": [
+                { "row": 0, "col": 0, "duration": 85 },
+                { "row": 0, "col": 1, "duration": 85 },
+                { "row": 0, "col": 2, "duration": 85 },
+                { "row": 0, "col": 3, "duration": 85 },
+                { "row": 0, "col": 4, "duration": 85 },
+                { "row": 0, "col": 5, "duration": 85 },
+                { "row": 0, "col": 6, "duration": 85 },
+                { "row": 0, "col": 7, "duration": 85 }
+              ]
+            }
+          },
+          "defaultKey": "dust_land_hard_effect:idle"
+        }
+      }
+    ]
+  },
+  {
     "type": "dust_land_effect",
     "components": [
       { "name": "position" },
@@ -454,6 +486,9 @@
           "pickUpVFX": "star_effect_2",
           "pickUpSFX": "pickup",
           "radius": 24,
+          "acceleration": 400,
+          "speed": 160,
+          "snappiness": 6,
           "applyToEntityTypes": ["player"],
           "limit": 1
         }
@@ -619,7 +654,17 @@
         }
       },
       { "name": "health", "metadata": { "maxHealth": 2 } },
-      { "name": "flying_ai" },
+      {
+        "name": "flying_ai",
+        "metadata": {
+          "stopRadius": 8,
+          "detectionRadius": 300,
+          "acceleration": 0,
+          "deceleration": 0,
+          "speed": 0,
+          "behavior": "turret"
+        }
+      },
       {
         "name": "animator",
         "metadata": {
@@ -714,7 +759,17 @@
         }
       },
       { "name": "health", "metadata": { "maxHealth": 2 } },
-      { "name": "flying_ai" },
+      {
+        "name": "flying_ai",
+        "metadata": {
+          "stopRadius": 8,
+          "detectionRadius": 300,
+          "acceleration": 500,
+          "deceleration": 300,
+          "speed": 24,
+          "behavior": "ghost"
+        }
+      },
       {
         "name": "animator",
         "metadata": {
@@ -765,7 +820,17 @@
         }
       },
       { "name": "health", "metadata": { "maxHealth": 3 } },
-      { "name": "flying_ai" },
+      {
+        "name": "flying_ai",
+        "metadata": {
+          "stopRadius": 8,
+          "detectionRadius": 300,
+          "acceleration": 0,
+          "deceleration": 0,
+          "speed": 0,
+          "behavior": "turret"
+        }
+      },
       {
         "name": "animator",
         "metadata": {
@@ -910,8 +975,11 @@
           "initialJumpBoost": 185,
           "jumpSpeed": 320,
           "speed": 100,
-          "acceleration": 10,
-          "deceleration": 14,
+          "acceleration": 600,
+          "deceleration": 900,
+          "wallSlideMaxFallSpeed": 80,
+          "wallClimbSpeed": 40,
+          "wallClimbAcceleration": 2000,
           "jumpSFX": "jump"
         }
       },
@@ -953,10 +1021,10 @@
               "loop": true,
               "keyframes": [{ "row": 1, "col": 2, "duration": 0 }]
             },
-            "player:wallJumping": {
+            "player:wallClimbing": {
               "sprite": "hero",
               "loop": true,
-              "keyframes": [{ "row": 1, "col": 0, "duration": 0 }]
+              "keyframes": [{ "row": 2, "col": 2, "duration": 0 }]
             },
             "player:wallSliding": {
               "sprite": "hero",
@@ -974,8 +1042,8 @@
             },
             "player:use_primary_weapon": {
               "sprite": "hero",
-              "loop": false,
-              "keyframes": [{ "row": 0, "col": 3, "duration": 750 }]
+              "loop": true,
+              "keyframes": [{ "row": 0, "col": 3, "duration": 0 }]
             }
           },
           "defaultKey": "player:idle"

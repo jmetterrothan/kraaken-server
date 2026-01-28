@@ -9861,24 +9861,11 @@
       "debug": false
     },
     {
-      "type": "alien_slime",
-      "uuid": "682c730b-dddb-4869-bed5-334911109883",
-      "position": {
-        "x": 1432,
-        "y": 456
-      },
-      "direction": {
-        "x": 1,
-        "y": 1
-      },
-      "debug": false
-    },
-    {
       "type": "ghost",
       "uuid": "b72502cb-613d-4a93-a3a0-462072a06b65",
       "position": {
-        "x": 1080,
-        "y": 216
+        "x": 1144,
+        "y": 264
       },
       "direction": {
         "x": 1,
@@ -9890,8 +9877,8 @@
       "type": "player",
       "uuid": "18907d0c-8961-40af-acd8-e8b9f5eefcb4",
       "position": {
-        "x": 1192,
-        "y": 408
+        "x": 40,
+        "y": 376
       },
       "direction": {
         "x": 1,
@@ -9929,8 +9916,8 @@
       "type": "ammo_box",
       "uuid": "1ac4863c-8457-4fd6-9bd5-c7a7a7ea5dd8",
       "position": {
-        "x": 1384,
-        "y": 312
+        "x": 1016,
+        "y": 328
       },
       "direction": {
         "x": 1,
@@ -9994,8 +9981,8 @@
       "type": "bat",
       "uuid": "e25602a3-5fc4-4204-9eb5-4d7ac010df82",
       "position": {
-        "x": 1496,
-        "y": 264
+        "x": 1096,
+        "y": 424
       },
       "direction": {
         "x": 1,
@@ -10007,8 +9994,8 @@
       "type": "bat",
       "uuid": "5587ac95-39f5-47f4-bb99-99dacb9f4423",
       "position": {
-        "x": 440,
-        "y": 328
+        "x": 408,
+        "y": 312
       },
       "direction": {
         "x": 1,
@@ -10033,8 +10020,8 @@
       "type": "bat",
       "uuid": "e437cb5a-b9ea-44a2-bd79-5e8243d74d05",
       "position": {
-        "x": 424,
-        "y": 312
+        "x": 392,
+        "y": 296
       },
       "direction": {
         "x": 1,
@@ -10046,8 +10033,86 @@
       "type": "alien_bat",
       "uuid": "30c9040d-26d4-44c6-9459-7ade4ac73f5c",
       "position": {
-        "x": 1272,
-        "y": 232
+        "x": 1384,
+        "y": 280
+      },
+      "direction": {
+        "x": 1,
+        "y": 1
+      },
+      "debug": false
+    },
+    {
+      "type": "bat",
+      "uuid": "32a74f1a-5fa9-4da0-907d-e4910c6864bb",
+      "position": {
+        "x": 808,
+        "y": 264
+      },
+      "direction": {
+        "x": 1,
+        "y": 1
+      },
+      "debug": false
+    },
+    {
+      "type": "ghost",
+      "uuid": "3509e466-0d49-4dbb-98a7-783391708522",
+      "position": {
+        "x": 1512,
+        "y": 408
+      },
+      "direction": {
+        "x": 1,
+        "y": 1
+      },
+      "debug": false
+    },
+    {
+      "type": "coin",
+      "uuid": "60ce4230-5996-4761-92c9-869a06a203a9",
+      "position": {
+        "x": 1224,
+        "y": 280
+      },
+      "direction": {
+        "x": 1,
+        "y": 1
+      },
+      "debug": false
+    },
+    {
+      "type": "coin",
+      "uuid": "33f17bd4-e8e2-465a-a761-2b9c08a5bac3",
+      "position": {
+        "x": 1224,
+        "y": 264
+      },
+      "direction": {
+        "x": 1,
+        "y": 1
+      },
+      "debug": false
+    },
+    {
+      "type": "coin",
+      "uuid": "02f96ee6-b1d6-4dcd-8aad-75ae7bceb8d8",
+      "position": {
+        "x": 1208,
+        "y": 264
+      },
+      "direction": {
+        "x": 1,
+        "y": 1
+      },
+      "debug": false
+    },
+    {
+      "type": "coin",
+      "uuid": "ce56133e-4115-4309-83db-298fc815b40b",
+      "position": {
+        "x": 1208,
+        "y": 280
       },
       "direction": {
         "x": 1,
@@ -10066,7 +10131,12 @@
       },
       "width": 32,
       "height": 48,
-      "color": [0, 0.65, 0.75, 1],
+      "color": [
+        0,
+        0.65,
+        0.75,
+        1
+      ],
       "cooldownDelay": -1,
       "maxTimesTriggered": -1,
       "shouldTriggerWhileActive": false,
@@ -10096,7 +10166,12 @@
       },
       "width": 1600,
       "height": 12,
-      "color": [1, 0.5, 0.5, 1],
+      "color": [
+        1,
+        0.5,
+        0.5,
+        1
+      ],
       "cooldownDelay": 1000,
       "maxTimesTriggered": -1,
       "shouldTriggerWhileActive": true,
@@ -10118,7 +10193,12 @@
       },
       "width": 48,
       "height": 10,
-      "color": [1, 0.5, 0.5, 1],
+      "color": [
+        1,
+        0.5,
+        0.5,
+        1
+      ],
       "cooldownDelay": 1000,
       "maxTimesTriggered": -1,
       "shouldTriggerWhileActive": true,
