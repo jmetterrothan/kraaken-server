@@ -43,6 +43,7 @@ const eventZoneSchema = Joi.object({
   maxTimesTriggered: Joi.number().required(),
   shouldTriggerWhileActive: Joi.boolean().required(),
   events: Joi.array().items(gameEventSchema).required(),
+  applyToEntityTypes: Joi.array().items(Joi.string().required()).optional(),
 });
 
 const roomSchema = Joi.object({

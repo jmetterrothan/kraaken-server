@@ -77,6 +77,12 @@
       "name": "cursors",
       "tileWidth": 18,
       "tileHeight": 18
+    },
+    {
+      "src": "/graphics/boss.png",
+      "name": "boss",
+      "tileWidth": 122,
+      "tileHeight": 122
     }
   ],
   "sounds": [
@@ -107,6 +113,22 @@
     {
       "src": "/sounds/bump_muffled.wav",
       "name": "bump_muffled"
+    },
+    {
+      "src": "/sounds/enemy_dead.wav",
+      "name": "enemy_dead"
+    },
+    {
+      "src": "/sounds/ghost_lament.wav",
+      "name": "ghost_lament"
+    },
+    {
+      "src": "/sounds/ghost_hurt.wav",
+      "name": "ghost_hurt"
+    },
+    {
+      "src": "/sounds/explosion.wav",
+      "name": "explosion"
     }
   ]
 }

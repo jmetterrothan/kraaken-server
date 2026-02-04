@@ -134,6 +134,7 @@
         "name": "rigid_body",
         "metadata": {
           "direction": { "x": 1, "y": 1 },
+          "maxFallSpeed": 400,
           "collide": false,
           "gravity": false
         }
@@ -254,19 +255,36 @@
     "type": "barrel",
     "components": [
       { "name": "placeable" },
+      {
+        "name": "collider",
+        "metadata": { "excludedEntityTypes": ["energy_bolt"] }
+      },
       { "name": "position" },
       {
         "name": "rigid_body",
         "metadata": {
           "direction": { "x": 1, "y": 1 },
           "collide": true,
+          "maxFallSpeed": 400,
           "gravity": true,
-          "bounciness": 0.25,
+          "bounciness": 0.15,
           "reflect": true,
           "reflectAngle": false
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 12, "height": 14 } },
+      {
+        "name": "health",
+        "metadata": {
+          "maxHealth": 3,
+          "deathVFX": "explosion",
+          "deathSFX": "explosion",
+          "immunityDelay": 0
+        }
+      },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 12, "height": 14, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "items", "align": "bottom", "row": 4, "col": 0 }
@@ -284,12 +302,16 @@
           "direction": { "x": 1, "y": 1 },
           "collide": true,
           "gravity": true,
-          "bounciness": 0.45,
+          "maxFallSpeed": 400,
+          "bounciness": 0.4,
           "reflect": true,
           "reflectAngle": false
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 9, "height": 13 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 9, "height": 13, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": {
@@ -323,12 +345,16 @@
           "direction": { "x": 1, "y": 1 },
           "collide": true,
           "gravity": true,
-          "bounciness": 0.45,
+          "maxFallSpeed": 400,
+          "bounciness": 0.4,
           "reflect": true,
           "reflectAngle": false
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 9, "height": 13 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 9, "height": 13, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": {
@@ -361,12 +387,16 @@
           "direction": { "x": 1, "y": 1 },
           "collide": true,
           "gravity": true,
+          "maxFallSpeed": 400,
           "bounciness": 0.45,
           "reflect": true,
           "reflectAngle": false
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 9, "height": 13 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 9, "height": 13, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": {
@@ -390,12 +420,16 @@
           "direction": { "x": 1, "y": 1 },
           "collide": true,
           "gravity": true,
+          "maxFallSpeed": 400,
           "bounciness": 0.45,
           "reflect": true,
           "reflectAngle": false
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 9, "height": 13 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 9, "height": 13, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": {
@@ -404,6 +438,15 @@
           "reflect": false,
           "row": 3,
           "col": 3
+        }
+      },
+      {
+        "name": "ammo_modifier",
+        "metadata": {
+          "pickUpVFX": "boost_effect",
+          "pickUpSFX": "pickup",
+          "applyToEntityTypes": ["player"],
+          "limit": 1
         }
       }
     ]
@@ -414,10 +457,19 @@
       { "name": "placeable" },
       { "name": "position" },
       { "name": "collider" },
-      { "name": "bounding_box", "metadata": { "width": 16, "height": 8 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 16, "height": 10, "debug": false }
+      },
       {
         "name": "sprite",
-        "metadata": { "alias": "tiles", "align": "center", "row": 4, "col": 13 }
+        "metadata": {
+          "alias": "tiles",
+          "align": "center",
+          "row": 4,
+          "col": 13,
+          "offset": { "x": 0, "y": 3 }
+        }
       }
     ]
   },
@@ -426,8 +478,21 @@
     "components": [
       { "name": "placeable" },
       { "name": "position" },
-      { "name": "collider" },
-      { "name": "bounding_box", "metadata": { "width": 16, "height": 16 } },
+      {
+        "name": "collider",
+        "metadata": { "excludedEntityTypes": ["energy_bolt"] }
+      },
+      {
+        "name": "health",
+        "metadata": {
+          "maxHealth": 2,
+          "immunityDelay": 0
+        }
+      },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 16, "height": 16, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "tiles", "align": "center", "row": 3, "col": 25 }
@@ -439,7 +504,10 @@
     "components": [
       { "name": "placeable" },
       { "name": "position" },
-      { "name": "bounding_box", "metadata": { "width": 12, "height": 16 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 12, "height": 34, "debug": false }
+      },
       { "name": "sprite", "metadata": { "alias": "torch", "align": "bottom" } },
       {
         "name": "animator",
@@ -449,9 +517,9 @@
               "sprite": "torch",
               "loop": true,
               "keyframes": [
-                { "row": 0, "col": 0, "duration": 200 },
-                { "row": 0, "col": 1, "duration": 200 },
-                { "row": 0, "col": 2, "duration": 200 }
+                { "row": 0, "col": 0, "duration": 220 },
+                { "row": 0, "col": 1, "duration": 220 },
+                { "row": 0, "col": 2, "duration": 220 }
               ]
             }
           },
@@ -470,10 +538,14 @@
         "metadata": {
           "direction": { "x": 1, "y": 1 },
           "collide": false,
-          "gravity": false
+          "gravity": false,
+          "maxFallSpeed": 400
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 5, "height": 7 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 6, "height": 8, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "items", "align": "center", "reflect": false }
@@ -485,8 +557,8 @@
           "amount": 1,
           "pickUpVFX": "star_effect_2",
           "pickUpSFX": "pickup",
-          "radius": 24,
-          "acceleration": 400,
+          "attractionRadius": 24,
+          "acceleration": 600,
           "speed": 160,
           "snappiness": 6,
           "applyToEntityTypes": ["player"],
@@ -496,14 +568,15 @@
       {
         "name": "animator",
         "metadata": {
+          "optimization": "singleton",
           "list": {
             "coin:idle": {
               "sprite": "items",
               "loop": true,
               "keyframes": [
-                { "row": 1, "col": 0, "duration": 100 },
-                { "row": 1, "col": 1, "duration": 100 },
-                { "row": 1, "col": 2, "duration": 100 }
+                { "row": 1, "col": 0, "duration": 120 },
+                { "row": 1, "col": 1, "duration": 120 },
+                { "row": 1, "col": 2, "duration": 120 }
               ]
             }
           },
@@ -536,36 +609,49 @@
     "type": "explosion",
     "components": [
       { "name": "position" },
-      { "name": "bounding_box", "metadata": { "width": 64, "height": 55 } },
+      {
+        "name": "explosion",
+        "metadata": {
+          "maxRadius": 40,
+          "expandMs": 800,
+          "knockback": 200,
+          "damage": 2.5
+        }
+      },
+      {
+        "name": "rigid_body",
+        "metadata": {
+          "direction": { "x": 1, "y": 1 },
+          "collide": false,
+          "gravity": false,
+          "maxFallSpeed": 400,
+          "clampToMap": false,
+          "velocity": { "x": 0, "y": 0 }
+        }
+      },
       {
         "name": "sprite",
         "metadata": {
           "alias": "explosions",
-          "align": "bottom",
-          "offset": { "x": 0, "y": -8 }
-        }
-      },
-      {
-        "name": "health_modifier",
-        "metadata": {
-          "amount": -2,
-          "pickUpSFX": "hit"
+          "align": "center",
+          "offset": { "x": 0, "y": 0 }
         }
       },
       {
         "name": "animator",
         "metadata": {
+          "optimization": "none",
           "list": {
             "explosion:idle": {
               "sprite": "explosions",
               "loop": false,
               "keyframes": [
-                { "row": 0, "col": 0, "duration": 50 },
-                { "row": 0, "col": 1, "duration": 50 },
-                { "row": 0, "col": 2, "duration": 50 },
-                { "row": 0, "col": 3, "duration": 75 },
-                { "row": 0, "col": 4, "duration": 75 },
-                { "row": 0, "col": 5, "duration": 75 },
+                { "row": 0, "col": 0, "duration": 75 },
+                { "row": 0, "col": 1, "duration": 75 },
+                { "row": 0, "col": 2, "duration": 75 },
+                { "row": 0, "col": 3, "duration": 100 },
+                { "row": 0, "col": 4, "duration": 125 },
+                { "row": 0, "col": 5, "duration": 100 },
                 { "row": 0, "col": 6, "duration": 75 },
                 { "row": 0, "col": 7, "duration": 75 }
               ]
@@ -573,6 +659,47 @@
           },
           "defaultKey": "explosion:idle"
         }
+      }
+    ]
+  },
+  {
+    "type": "grenade",
+    "components": [
+      { "name": "position" },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 6, "height": 6, "debug": true }
+      },
+      {
+        "name": "rigid_body",
+        "metadata": {
+          "velocity": { "x": 0, "y": 0 },
+          "direction": { "x": 1, "y": 1 },
+          "collide": true,
+          "gravity": true,
+          "clampToMap": true,
+          "bounciness": 0.5,
+          "reflect": true,
+          "reflectAngle": true,
+          "debug": true
+        }
+      },
+      {
+        "name": "health",
+        "metadata": {
+          "maxHealth": 1,
+          "deathVFX": "explosion",
+          "deathSFX": "explosion",
+          "immunityDelay": 0
+        }
+      },
+      {
+        "name": "projectile",
+        "metadata": { "speed": 260 }
+      },
+      {
+        "name": "fuse",
+        "metadata": { "delay": 2000, "expireAction": "kill" }
       }
     ]
   },
@@ -587,13 +714,16 @@
           "direction": { "x": 1, "y": 1 },
           "collide": true,
           "gravity": false,
-          "bounciness": 0.8,
+          "bounciness": 0.9,
           "reflect": true,
           "reflectAngle": true,
           "reflectVFX": "dust_hit_effect"
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 4, "height": 4 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 4, "height": 4, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "items", "align": "center", "reflect": false }
@@ -602,11 +732,17 @@
         "name": "health_modifier",
         "metadata": {
           "amount": -1,
+          "knockback": 10,
+          "limit": 1,
           "pickUpVFX": "energy_blast",
           "pickUpSFX": "hit"
         }
       },
-      { "name": "projectile", "metadata": { "speed": 275, "ttl": 800 } },
+      { "name": "projectile", "metadata": { "speed": 275 } },
+      {
+        "name": "fuse",
+        "metadata": { "delay": 1000, "expireAction": "despawn" }
+      },
       {
         "name": "animator",
         "metadata": {
@@ -636,10 +772,14 @@
         "metadata": {
           "direction": { "x": 1, "y": 1 },
           "collide": false,
-          "gravity": false
+          "gravity": false,
+          "maxFallSpeed": 400
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 9, "height": 9 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 9, "height": 9, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "enemies", "align": "center" }
@@ -653,7 +793,14 @@
           "limit": -1
         }
       },
-      { "name": "health", "metadata": { "maxHealth": 2 } },
+      {
+        "name": "health",
+        "metadata": {
+          "maxHealth": 2,
+          "deathSFX": "enemy_dead",
+          "immunityDelay": 0
+        }
+      },
       {
         "name": "flying_ai",
         "metadata": {
@@ -690,14 +837,33 @@
       { "name": "placeable" },
       { "name": "position" },
       {
+        "name": "movement",
+        "metadata": {
+          "initialJumpBoost": 180,
+          "jumpSpeed": 300,
+          "coyoteTimeMs": 100,
+          "speed": 80,
+          "acceleration": 600,
+          "deceleration": 900,
+          "wallSlideMaxFallSpeed": 60,
+          "wallClimbSpeed": 80,
+          "wallClimbAcceleration": 2000,
+          "maxFallSpeed": 0
+        }
+      },
+      {
         "name": "rigid_body",
         "metadata": {
           "direction": { "x": 1, "y": 1 },
           "collide": true,
-          "gravity": true
+          "gravity": true,
+          "maxFallSpeed": 400
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 13, "height": 12 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 13, "height": 12, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "enemies", "align": "bottom" }
@@ -711,12 +877,20 @@
           "limit": -1
         }
       },
-      { "name": "health", "metadata": { "maxHealth": 1 } },
       {
-        "name": "animator",
+        "name": "health",
+        "metadata": { "maxHealth": 1, "immunityDelay": 0 }
+      },
+      {
+        "name": "enemy_animator",
         "metadata": {
           "list": {
             "alien_slime:idle": {
+              "sprite": "enemies",
+              "loop": true,
+              "keyframes": [{ "row": 3, "col": 0, "duration": 150 }]
+            },
+            "alien_slime:walking": {
               "sprite": "enemies",
               "loop": true,
               "keyframes": [
@@ -741,10 +915,14 @@
         "metadata": {
           "direction": { "x": 1, "y": 1 },
           "collide": false,
-          "gravity": false
+          "gravity": false,
+          "maxFallSpeed": 400
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 13, "height": 13 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 13, "height": 13, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "enemies", "align": "center" }
@@ -758,7 +936,15 @@
           "limit": -1
         }
       },
-      { "name": "health", "metadata": { "maxHealth": 2 } },
+      {
+        "name": "health",
+        "metadata": {
+          "maxHealth": 2,
+          "hurtSFX": "ghost_hurt",
+          "deathSFX": "ghost_lament",
+          "immunityDelay": 0
+        }
+      },
       {
         "name": "flying_ai",
         "metadata": {
@@ -767,7 +953,7 @@
           "acceleration": 500,
           "deceleration": 300,
           "speed": 24,
-          "behavior": "ghost"
+          "behavior": "seek"
         }
       },
       {
@@ -799,12 +985,13 @@
         "metadata": {
           "direction": { "x": 1, "y": 1 },
           "collide": false,
-          "gravity": false
+          "gravity": false,
+          "maxFallSpeed": 400
         }
       },
       {
         "name": "bounding_box",
-        "metadata": { "width": 9, "height": 11 }
+        "metadata": { "width": 9, "height": 11, "debug": false }
       },
       {
         "name": "sprite",
@@ -819,7 +1006,14 @@
           "limit": -1
         }
       },
-      { "name": "health", "metadata": { "maxHealth": 3 } },
+      {
+        "name": "health",
+        "metadata": {
+          "maxHealth": 2,
+          "deathSFX": "enemy_dead",
+          "immunityDelay": 0
+        }
+      },
       {
         "name": "flying_ai",
         "metadata": {
@@ -856,14 +1050,32 @@
       { "name": "placeable" },
       { "name": "position" },
       {
+        "name": "movement",
+        "metadata": {
+          "initialJumpBoost": 180,
+          "jumpSpeed": 300,
+          "coyoteTimeMs": 100,
+          "speed": 80,
+          "acceleration": 600,
+          "deceleration": 900,
+          "wallSlideMaxFallSpeed": 60,
+          "wallClimbSpeed": 80,
+          "wallClimbAcceleration": 2000
+        }
+      },
+      {
         "name": "rigid_body",
         "metadata": {
           "direction": { "x": 1, "y": 1 },
           "collide": true,
-          "gravity": true
+          "gravity": true,
+          "maxFallSpeed": 400
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 15, "height": 12 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 15, "height": 12, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "enemies", "align": "bottom" }
@@ -877,12 +1089,20 @@
           "limit": -1
         }
       },
-      { "name": "health", "metadata": { "maxHealth": 2 } },
       {
-        "name": "animator",
+        "name": "health",
+        "metadata": { "maxHealth": 2, "immunityDelay": 0 }
+      },
+      {
+        "name": "enemy_animator",
         "metadata": {
           "list": {
-            "dino:idle": {
+            "frog:idle": {
+              "sprite": "enemies",
+              "loop": true,
+              "keyframes": [{ "row": 2, "col": 0, "duration": 0 }]
+            },
+            "frog:walking": {
               "sprite": "enemies",
               "loop": true,
               "keyframes": [
@@ -892,7 +1112,7 @@
               ]
             }
           },
-          "defaultKey": "dino:idle"
+          "defaultKey": "frog:idle"
         }
       }
     ]
@@ -903,14 +1123,32 @@
       { "name": "placeable" },
       { "name": "position" },
       {
+        "name": "movement",
+        "metadata": {
+          "initialJumpBoost": 180,
+          "jumpSpeed": 300,
+          "coyoteTimeMs": 100,
+          "speed": 80,
+          "acceleration": 600,
+          "deceleration": 900,
+          "wallSlideMaxFallSpeed": 60,
+          "wallClimbSpeed": 80,
+          "wallClimbAcceleration": 2000
+        }
+      },
+      {
         "name": "rigid_body",
         "metadata": {
           "direction": { "x": 1, "y": 1 },
           "collide": true,
-          "gravity": true
+          "gravity": true,
+          "maxFallSpeed": 400
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 10, "height": 13 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 10, "height": 13, "debug": false }
+      },
       {
         "name": "sprite",
         "metadata": { "alias": "enemies", "align": "bottom" }
@@ -924,9 +1162,12 @@
           "limit": -1
         }
       },
-      { "name": "health", "metadata": { "maxHealth": 3 } },
       {
-        "name": "animator",
+        "name": "health",
+        "metadata": { "maxHealth": 3, "immunityDelay": 0 }
+      },
+      {
+        "name": "enemy_animator",
         "metadata": {
           "list": {
             "dino:idle": {
@@ -941,11 +1182,21 @@
               "sprite": "enemies",
               "loop": true,
               "keyframes": [
-                { "row": 5, "col": 0, "duration": 125 },
-                { "row": 5, "col": 1, "duration": 125 },
-                { "row": 5, "col": 2, "duration": 125 },
-                { "row": 5, "col": 3, "duration": 125 }
+                { "row": 5, "col": 0, "duration": 200 },
+                { "row": 5, "col": 1, "duration": 200 },
+                { "row": 5, "col": 2, "duration": 200 },
+                { "row": 5, "col": 3, "duration": 200 }
               ]
+            },
+            "dino:jumping": {
+              "sprite": "enemies",
+              "loop": true,
+              "keyframes": [{ "row": 5, "col": 1, "duration": 0 }]
+            },
+            "dino:falling": {
+              "sprite": "enemies",
+              "loop": true,
+              "keyframes": [{ "row": 5, "col": 2, "duration": 0 }]
             }
           },
           "defaultKey": "dino:idle"
@@ -956,6 +1207,8 @@
   {
     "type": "player",
     "components": [
+      { "name": "player_input" },
+      { "name": "player_combat" },
       { "name": "placeable" },
       { "name": "position" },
       {
@@ -964,31 +1217,38 @@
           "direction": { "x": -1, "y": 1 },
           "collide": true,
           "gravity": true,
-          "clamToMap": true
+          "maxFallSpeed": 400,
+          "clampToMap": true
         }
       },
-      { "name": "player_input" },
-      { "name": "player_combat" },
       {
         "name": "movement",
         "metadata": {
-          "initialJumpBoost": 185,
-          "jumpSpeed": 320,
-          "speed": 100,
+          "initialJumpBoost": 180,
+          "jumpSpeed": 300,
+          "coyoteTimeMs": 100,
+          "speed": 80,
           "acceleration": 600,
           "deceleration": 900,
-          "wallSlideMaxFallSpeed": 80,
-          "wallClimbSpeed": 40,
+          "wallSlideMaxFallSpeed": 60,
+          "wallClimbSpeed": 80,
           "wallClimbAcceleration": 2000,
-          "jumpSFX": "jump"
+          "jumpSFX": "jump",
+          "jumpVFX": "dust_jump_effect",
+          "landHardVFX": "dust_land_hard_effect",
+          "landVFX": "dust_land_effect",
+          "runTrailVFX": "dust_accelerate_effect"
         }
       },
-      { "name": "bounding_box", "metadata": { "width": 8, "height": 13 } },
+      {
+        "name": "bounding_box",
+        "metadata": { "width": 8, "height": 13, "debug": false }
+      },
       {
         "name": "health",
         "metadata": {
           "maxHealth": 12,
-          "immunityDelay": 1000,
+          "immunityDelay": 0,
           "hurtSFX": "classic_hurt",
           "deathSFX": "classic_hurt"
         }
