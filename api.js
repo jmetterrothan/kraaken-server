@@ -13,7 +13,9 @@ const projectsPath = path.join(__dirname, `projects`);
 
 api.use(nocache());
 api.use(cors({ origin: "*" }));
-api.use(bodyParser.json());
+api.use(
+  bodyParser.json({ limit: "10mb", extended: true, parameterLimit: 10000 }),
+);
 api.use("/projects", express.static(projectsPath));
 
 api.get("/", function (req, res) {
