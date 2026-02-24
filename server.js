@@ -11,7 +11,7 @@ const app = express();
 app.use("/api", api);
 
 const server = new http.Server(app);
-const port = process.env.PORT || 4200;
+const port = process.env.PORT || 10000;
 const host = process.env.HOST || "0.0.0.0";
 
 const rooms = new Map();
