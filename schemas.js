@@ -2,17 +2,13 @@ const Joi = require("joi");
 
 const colorSchema = Joi.array().items(Joi.number().min(0).max(1)).length(4);
 
-const gameEventSchema = Joi.object({
-  type: Joi.string().required(),
-  data: Joi.any().required(),
-});
-
 const eventZoneMetadataSchema = Joi.object({
   mode: Joi.string().valid("contains", "intersects").optional(),
+  type: Joi.string().required(),
+  data: Joi.any().required(),
   cooldownDelay: Joi.number().optional(),
   maxTimesTriggered: Joi.number().optional(),
   shouldTriggerWhileActive: Joi.boolean().optional(),
-  events: Joi.array().items(gameEventSchema).optional(),
   applyToEntityTypes: Joi.array().items(Joi.string().required()).optional(),
 });
 
@@ -39,7 +35,7 @@ const componentMetadataSchema = Joi.object({
   position: positionMetadata.optional(),
   rigid_body: rigidBodyMetadata.optional(),
   bounding_box: boundingBoxMetadata.optional(),
-  event_zone: eventZoneMetadataSchema.optional(),
+  event: eventZoneMetadataSchema.optional(),
 });
 
 const spawnPointSchema = Joi.object({
